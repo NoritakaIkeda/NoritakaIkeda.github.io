@@ -19,6 +19,6 @@ jobs:
           # ターゲットブランチを指定します（通常は'gh-pages'）
           PAGES_BRANCH: gh-pages
           # GitHub Personal Access Tokenを使用してアクセス権を提供します
-          TOKEN: ${{ secrets.TOKEN }}
+          TOKEN: ${{ secrets.ACTIONS_DEPLOY_TOKEN }}
           # もしくは、同じリポジトリへの公開の場合、自動生成されるGitHubトークンを使用します
           #TOKEN: ${{ secrets.GITHUB_TOKEN }}
