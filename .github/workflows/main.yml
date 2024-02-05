@@ -15,7 +15,7 @@ jobs:
       - name: Build and deploy with Zola
         uses: shalzz/zola-deploy-action@v0.17.2
         env:
-          REPOSITORY: myblog//noritakaikeda.github.io/
+          REPOSITORY: myblog/noritakaikeda.github.io/
           # ターゲットブランチを指定します（通常は'gh-pages'）
           PAGES_BRANCH: gh-pages
           # GitHub Personal Access Tokenを使用してアクセス権を提供します
