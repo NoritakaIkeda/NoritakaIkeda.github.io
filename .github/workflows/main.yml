@@ -1,19 +1,23 @@
 # On every push this script is executed
 on: push
+
 name: Build and deploy GH Pages
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master' # ブランチを必要に応じて変更
+
     steps:
-      - name: checkout
+      - name: Checkout code
         uses: actions/checkout@v4
-      - name: build_and_deploy
+
+      - name: Build and deploy with Zola
         uses: shalzz/zola-deploy-action@v0.17.2
         env:
-          # Target branch
-          PAGES_BRANCH: master
-          # Provide personal access token
+          # ターゲットブランチを指定します（通常は'gh-pages'）
+          PAGES_BRANCH: gh-pages
+          # GitHub Personal Access Tokenを使用してアクセス権を提供します
           TOKEN: ${{ secrets.TOKEN }}
-          # Or if publishing to the same repo, use the automatic token
+          # もしくは、同じリポジトリへの公開の場合、自動生成されるGitHubトークンを使用します
           #TOKEN: ${{ secrets.GITHUB_TOKEN }}
