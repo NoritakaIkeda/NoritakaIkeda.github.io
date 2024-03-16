@@ -1,6 +1,6 @@
 +++
-title = "My first post"
-date = 2019-11-27
+title = "学生に最初に覚えてもらう開発言語を TypeScript にして良かったこと"
+date = 2023-02-27
 +++
 
 # 学生に最初に覚えてもらう開発言語を TypeScript にして良かったこと
